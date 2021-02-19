@@ -76,9 +76,9 @@ public class Program
 						 	Console.WriteLine("No podemos dispensar esa cantidad");
 						 }else{
 						 	Console.WriteLine("Se le han sumado " +Suma1000 +" En 1000 pesos");
-							Console.WriteLine("Se le han sumado en " +Suma500 +" En 500 pesos");
-							Console.WriteLine("Se le han sumado en " +Suma200 +" En 200 pesos");
-							Console.WriteLine("Se le han sumado en " +Suma100 +" En 100 pesos");
+							Console.WriteLine("Se le han sumado " +Suma500 +" En 500 pesos");
+							Console.WriteLine("Se le han sumado " +Suma200 +" En 200 pesos");
+							Console.WriteLine("Se le han sumado " +Suma100 +" En 100 pesos");
 							Console.WriteLine(SumaTotal);
 						 }
 					 }
@@ -86,15 +86,16 @@ public class Program
 				  break;
 			  case 2:
 				  Limite = 10000;
-					 if(Monto > Limite){
-							Console.WriteLine("Este monto exede el limite de su transaccion");
-							 break;
-						 }else{
+					if(Monto > Limite){
+						Console.WriteLine("Este monto exede el limite de su transaccion");
+						 break;
+					 }else{
 					 	while(Suma1000 < Monto){
 							if(Suma1000 + 1000 > Monto){
 								break;
 							}else{
 								Suma1000 = Suma1000 + 1000;
+								Billetes1000 = Billetes1000 - Suma1000;
 							}
 						}
 						 SumaTotal = Suma1000;
@@ -104,6 +105,7 @@ public class Program
 								break;
 							}else{
 								Suma500 = Suma500 + 500;
+								Billetes500 = Billetes500 - Suma500;
 								SumaTotal = SumaTotal + 500;
 							}
 						}
@@ -113,6 +115,7 @@ public class Program
 								break;
 							}else{
 								Suma200 = Suma200 + 200;
+								Billetes200 = Billetes200 - Suma200;
 								SumaTotal = SumaTotal + 200;
 							}
 						}
@@ -122,19 +125,20 @@ public class Program
 								break;
 							}else{
 								Suma100 = Suma100 + 100;
+								Billetes100 = Billetes100 - Suma100;
 								SumaTotal = SumaTotal + 100;
 							}
 						}
-					 }
-				 		if(SumaTotal != Monto){
+						 if(SumaTotal != Monto){
 						 	Console.WriteLine("No podemos dispensar esa cantidad");
 						 }else{
 						 	Console.WriteLine("Se le han sumado " +Suma1000 +" En 1000 pesos");
-							Console.WriteLine("Se le han sumado en " +Suma500 +" En 500 pesos");
-							Console.WriteLine("Se le han sumado en " +Suma200 +" En 200 pesos");
-							Console.WriteLine("Se le han sumado en " +Suma100 +" En 100 pesos");
+							Console.WriteLine("Se le han sumado " +Suma500 +" En 500 pesos");
+							Console.WriteLine("Se le han sumado " +Suma200 +" En 200 pesos");
+							Console.WriteLine("Se le han sumado " +Suma100 +" En 100 pesos");
 							Console.WriteLine(SumaTotal);
 						 }
+					 }
 					  break;
 			  default:
 				  Console.WriteLine("Default case");
