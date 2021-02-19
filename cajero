@@ -141,7 +141,7 @@ public class Program
 					 }
 					  break;
 			  default:
-				  Console.WriteLine("Default case");
+				  Console.WriteLine("Error en la seleccion del banco");
 				  break;
 		  }
 		
